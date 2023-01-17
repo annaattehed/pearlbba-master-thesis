@@ -29,9 +29,6 @@ const Navbar = () => {
 
         <div className="right-section">
             <div className="section-links">
-                <Link className='link' to="/">Homepage</Link>
-            </div>
-            <div className="section-links">
                 <Link className='link' to="/">About</Link>
              </div>
              <div className="section-links">
@@ -41,10 +38,10 @@ const Navbar = () => {
               <SearchTwoToneIcon/>
               <PersonOutlineTwoToneIcon/>
               <FavoriteTwoToneIcon/>
-            <div className="cart-icon">
-              <ShoppingCartTwoToneIcon/>
-              <span>0</span>
-            </div>
+              <div className="cart-icon">
+                <ShoppingCartTwoToneIcon/>
+                <span>0</span>
+              </div>
             </div>
         </div>
       </div>
