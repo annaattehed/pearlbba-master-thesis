@@ -1,0 +1,44 @@
+.footer{
+    margin: 100px 100px 20px 100px;
+
+    .section-top-footer{
+        display: flex;
+        gap: 120px;
+
+        .section-links{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            
+        }
+        .footer-information{
+            text-align: justify;
+            font-size: 15px;
+            line-height: 30px;
+        }
+
+        h1{
+            font-size: 20px;
+            font-weight: 600;
+            color: rgb(173, 173, 173);
+        }
+
+        span{
+            color: grey;
+        }
+    }
+
+    .section-bottom-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+       
+        .copyright-section{
+            display: flex;
+            color: grey;
+            font-size: 15px;
+        }
+    }
+}

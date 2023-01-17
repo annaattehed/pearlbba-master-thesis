@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./Footer.scss";
 
 const Footer = () => {
 
@@ -42,11 +43,8 @@ const Footer = () => {
         </div>
       </div>
       <div className='section-bottom-footer'>
-          <div className='left-section'>
-            <span>här ska det vara en bild tror jag.</span>
-          </div>
-          <div className="right-section">
-              <small>Copyright © {year} PEARLBBA</small>
+          <div className="copyright-section">
+              <small>Copyright © {year} <b>PEARLBBA</b> - All Rights Reserved</small>
           </div>
       </div>
     </div>
