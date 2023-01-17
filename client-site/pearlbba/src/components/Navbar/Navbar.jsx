@@ -13,29 +13,29 @@ const Navbar = () => {
       <div className="wrapper-navbar">
         <div className="left-section">
             <div className="section-links">
-              <Link to="/products/1">Necklaces</Link>
+              <Link className='link' to="/products/1">Necklaces</Link>
             </div>
             <div className="section-links">
-              <Link to="/products/2">Bracelets</Link>
+              <Link className='link' to="/products/2">Bracelets</Link>
             </div>
             <div className="section-links">
-              <Link to="/products/3">Rings</Link>
+              <Link className='link' to="/products/3">Rings</Link>
             </div>
         </div>
 
         <div className="center-section">
-            <Link to="/">PEARLBBA - handmade jewellery online</Link>
+            <Link className='link' to="/">PEARLBBA - handmade jewellery online</Link>
         </div>
 
         <div className="right-section">
             <div className="section-links">
-                <Link to="/">Homepage</Link>
+                <Link className='link' to="/">Homepage</Link>
             </div>
             <div className="section-links">
-                <Link to="/">About</Link>
+                <Link className='link' to="/">About</Link>
              </div>
              <div className="section-links">
-                <Link to="/">Contact us</Link>
+                <Link className='link' to="/">Contact us</Link>
             </div>
             <div className="section-icons">
               <SearchTwoToneIcon/>

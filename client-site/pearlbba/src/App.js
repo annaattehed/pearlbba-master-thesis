@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage/Homepage";
 import Products from "./pages/Products/Products";
 import Product from "./pages/Product-single/Product";
+import "./app.scss";
 // import "./index.css";
 
 const Layout = () =>{
