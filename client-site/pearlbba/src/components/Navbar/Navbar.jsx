@@ -34,15 +34,15 @@ const Navbar = () => {
              <div className="section-links">
                 <Link className='link' to="/">Contact us</Link>
             </div>
-            <div className="section-icons">
-              <SearchTwoToneIcon/>
-              <PersonOutlineTwoToneIcon/>
-              <FavoriteTwoToneIcon/>
-              <div className="cart-icon">
-                <ShoppingCartTwoToneIcon/>
-                <span>0</span>
+              <div className="section-icons">
+                <SearchTwoToneIcon/>
+                <PersonOutlineTwoToneIcon/>
+                <FavoriteTwoToneIcon/>
+                  <div className="cart-icon">
+                    <ShoppingCartTwoToneIcon/>
+                    <span>0</span>
+                  </div>
               </div>
-            </div>
         </div>
       </div>
     </div>
