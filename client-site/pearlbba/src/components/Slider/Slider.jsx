@@ -4,9 +4,10 @@ import KeyboardDoubleArrowLeftTwoToneIcon from '@mui/icons-material/KeyboardDoub
 import KeyboardDoubleArrowRightTwoToneIcon from '@mui/icons-material/KeyboardDoubleArrowRightTwoTone';
 
 const data = [
-    "https://www.pexels.com/photo/body-of-water-under-cloudy-blue-sky-4784378/",
-    "https://www.pexels.com/photo/aerial-shot-of-beach-3204755/",
-    "https://www.pexels.com/photo/bird-s-eye-view-of-sea-water-1456291/",
+    "https://images.pexels.com/photos/1456291/pexels-photo-1456291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "https://images.pexels.com/photos/66258/staniel-cay-swimming-pig-seagull-fish-66258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "https://images.pexels.com/photos/1268874/pexels-photo-1268874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    
 ];
 
 const Slider = () => {
