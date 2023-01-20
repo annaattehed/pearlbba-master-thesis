@@ -7,8 +7,8 @@ const Homepage = () => {
   return (
     <div className='homepage'>
       <Slider/>
-      <Bestsellers type="Best selling"/>
-      <Bestsellers type="Newest arrival"/>
+      <Bestsellers type="bestselling"/>
+      <Bestsellers type="new"/>
     </div>
   )
 }
