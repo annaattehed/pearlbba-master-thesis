@@ -1,4 +1,5 @@
 import React from 'react';
+import Imagecards from '../Imagecards/Imagecards';
 import './Bestsellers.scss';
 
 const BestSellers = ({type}) => {
@@ -59,7 +60,9 @@ const BestSellers = ({type}) => {
                     </p>
             </div>
             <div className="bottom-homepage-products">
-                
+                {data.map(item=>(
+                    <Imagecards item={item} key={item.id}/>
+                ))}
             </div>
         </div>
     )
