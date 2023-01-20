@@ -1,8 +1,21 @@
-import React from 'react'
+import React from 'react';
+import './Imagecards.scss';
+import {Link} from 'react-router-dom';
 
-const Imagecards = () => {
+const Imagecards = ({item}) => {
   return (
-    <div className='imagecards'>Imagecards</div>
+    <Link to={`/product/${item.id}`}>
+    <div className='imagecards'>
+        <div className='image'>
+            <img src="{item.img}" alt="" className="image" />
+        </div>
+        <h2>{item.title}</h2>
+        <div className="prices">
+            <h3>${item.oldPrice}</h3>
+            <h3>${item.price}</h3>
+        </div>
+    </div>
+    </Link>
   )
 }
 
