@@ -21,9 +21,33 @@
 
         span{
             position: absolute;
-            top: 50px;
+            top: 40px;
             left: 5px;
             background-color: white;
+            color: thistle;
+            z-index: 3;
+            font-weight: 600;
+            font-size: 12px;
+        }
+    }
+
+    h2{
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .prices{
+        display: flex;
+        gap: 20px;
+
+        h3{
+            font-size: 18px;
+            font-weight: 500;
+
+            &:first-child{
+                color: gray;
+                text-decoration: line-through;
+            }
         }
     }
 }
