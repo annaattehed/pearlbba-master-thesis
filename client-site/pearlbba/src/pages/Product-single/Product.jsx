@@ -1,8 +1,11 @@
 import React from 'react';
+import { useState } from 'react';
 import './Product.scss';
 
 const Product = () => {
 
+  // inte rätt bilder 
+  const [selectedImg,setSelectedImg] =useState(0)
   const images = [
     "https://images.pexels.com/photos/1456291/pexels-photo-1456291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "https://images.pexels.com/photos/1268874/pexels-photo-1268874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -11,12 +14,15 @@ const Product = () => {
     <div className='product-single'>
       <div className="productpage-left-section">
         <div className="images">
-          <img src={images[0]} alt="" />
-          <img src={images[1]} alt="" />
+          <img src={images[0]} alt="" onClick={e=>setSelectedImg(0)} />
+          <img src={images[1]} alt="" onClick={e=>setSelectedImg(1)}/>
+        </div>
+        <div className="mainImg">
+          <img src={images[selectedImg]} alt="" />
         </div>
       </div>
       <div className="productpage-right-section">
-        
+
       </div>
     </div>
   )
