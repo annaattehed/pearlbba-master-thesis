@@ -12,6 +12,10 @@ const Products = () => {
 
   const [maxPrice,setMaxPrice] = useState(1000)
 
+  // sorting categories 
+
+  const [sort,setSort] = useState(null);
+
   return (
     <div className='products'>
       <div className="left-section">
@@ -41,21 +45,21 @@ const Products = () => {
         <div className="product-sidebar">
           <h2>Sort products by</h2>
           <div className="input-item">
-            <input type="radio" name="price" id="asc" value="asc" />
+            <input type="radio" name="price" id="asc" value="asc" onChange={e=>setSort("asc")} />
             <label htmlFor="asc">Price (Show the lowest first)</label>
           </div>
           <div className="input-item">
-            <input type="radio" name="price" id="desc" value="desc" />
+            <input type="radio" name="price" id="desc" value="desc" onChange={e=>setSort("asc")} />
             <label htmlFor="desc">Price (Show the highest first)</label>
           </div>
         </div>
       </div>
       <div className="right-section">
         <img className="categoryImg"
-         src="https://images.pexels.com/photos/3556665/pexels-photo-3556665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+         src="https://images.pexels.com/photos/1456291/pexels-photo-1456291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
          alt=""
          />
-         <List/>
+         <List catId={catId} maxPrice={maxPrice} sort={sort}/>
       </div>
     </div>
   )
