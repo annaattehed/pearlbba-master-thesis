@@ -1,6 +1,7 @@
 import React from 'react'
 import Bestsellers from '../../components/BestSellers/Bestsellers'
 import Categories from '../../components/Categories/Categories'
+import Newsletter from '../../components/Newsletter/Newsletter'
 import Slider from '../../components/Slider/Slider'
 import './Homepage.scss'
 
@@ -11,6 +12,7 @@ const Homepage = () => {
       <Bestsellers type="bestselling"/>
       <Categories/>
       <Bestsellers type="new"/>
+      <Newsletter/>
     </div>
   )
 }
