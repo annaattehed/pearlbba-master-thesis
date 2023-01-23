@@ -1,8 +1,17 @@
 import React from 'react';
 import './Products.scss';
 import List from '../../components/Listing/List';
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 
 const Products = () => {
+
+  const catId = parseInt(useParams().id);
+
+  // making range-values dynamic
+
+  const [maxPrice,setMaxPrice] = useState(1000)
+
   return (
     <div className='products'>
       <div className="left-section">
@@ -25,8 +34,8 @@ const Products = () => {
           <h2>Filter by price</h2>
           <div className="input-item">
             <span>0</span>
-            <input type="range" min={0} max={1000} />
-            <span>1000</span>
+            <input type="range" min={0} max={1000} onChange={(e)=>setMaxPrice(e.target.value)} /> 
+            <span>{maxPrice}</span>
           </div>
         </div>
         <div className="product-sidebar">
