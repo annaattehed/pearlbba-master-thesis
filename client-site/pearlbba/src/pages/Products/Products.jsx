@@ -1,5 +1,6 @@
 import React from 'react';
 import './Products.scss';
+import List from '../../components/Listing/List';
 
 const Products = () => {
   return (
@@ -41,7 +42,11 @@ const Products = () => {
         </div>
       </div>
       <div className="right-section">
-
+        <img className="categoryImg"
+         src="https://images.pexels.com/photos/3556665/pexels-photo-3556665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+         alt=""
+         />
+         <List/>
       </div>
     </div>
   )
