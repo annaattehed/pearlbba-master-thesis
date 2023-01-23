@@ -1,3 +1,34 @@
 .newsletter{
-    
+    background-color:rgb(237, 210, 214);
+    color: whitesmoke;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+
+    .newsletter-wrapper{
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+        width: 50%;
+
+        input{
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0  5px;
+            text-align: center;
+        }
+
+        button{
+            padding: 10px;
+            color: whitesmoke;
+            background: #333;
+            border: none;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .icons{
+            display: flex;
+            gap: 10px;
+        }
+    }
 }

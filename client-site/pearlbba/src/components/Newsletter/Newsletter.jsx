@@ -9,10 +9,10 @@ const Newsletter = () => {
   return (
     <div className='newsletter'>
         <div className="newsletter-wrapper">
-            <span>Subrsribe to our Newsletter:</span>
+            <span>SUBSCRIBE TO OUR NEWSLETTER</span>
             <div className="mail">
-                <input type="text" placeholder="Enter your email &hearts;" />
-                <button className='submit-button'>Join team Pearlbba</button>
+                <input type="text" placeholder="ENTER EMAIL &hearts;" />
+                <button className='submit-button'>JOIN TEAM PEARLBBA</button>
             </div>
             <div className="icons">
                 <FacebookIcon/>
