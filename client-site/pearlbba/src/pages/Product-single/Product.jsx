@@ -41,9 +41,30 @@ const Product = () => {
           {quantity}
           <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
         </div>
+        <button className='add-to-cart'>
+          <AddShoppingCartIcon /> ADD TO CART 
+        </button>
+        <div className="link">
+          <div className="item">
+          <FavoriteBorderIcon /> ADD TO WISHLIST 
+          </div>
+        </div>
+        <div className="product-information">
+          <span>hej</span>
+          <span>hej</span>
+          <span>hej</span>
+        </div>
+        <hr />
+        <div className="product-details">
+          <span>PRODUCT DESCRIPTION</span>
+          <hr />
+          <span>OTHER ADDITIONAL INFORMATION</span>
+          <hr />
+          <span>SHOP WITH US - THE DETAILS</span>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Product
