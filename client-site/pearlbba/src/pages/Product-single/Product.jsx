@@ -1,11 +1,18 @@
 import React from 'react';
 import { useState } from 'react';
 import './Product.scss';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const Product = () => {
 
-  // inte rätt bilder 
+  
   const [selectedImg,setSelectedImg] =useState(0)
+
+  const [quantity,setQuantity] =useState(1)
+
+    // inte rätt bilder 
+
   const images = [
     "https://images.pexels.com/photos/1456291/pexels-photo-1456291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "https://images.pexels.com/photos/1268874/pexels-photo-1268874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -22,7 +29,18 @@ const Product = () => {
         </div>
       </div>
       <div className="productpage-right-section">
-
+        <h1>PRODUCT TITLE</h1>
+        <span>PRODUCT PRICE</span>
+        <p> PRODUCT INFO - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Culpa dolores, autem iste nam commodi fugiat ratione, neque
+          soluta vero tempora minus, eius nihil at ex labore corporis 
+          fuga dignissimos quisquam.
+        </p>
+        <div className="quantity">
+          <button onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev-1))}>-</button>
+          {quantity}
+          <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
+        </div>
       </div>
     </div>
   )
