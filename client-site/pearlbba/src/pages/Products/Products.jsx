@@ -22,9 +22,22 @@ const Products = () => {
         </div>
         <div className="product-sidebar">
           <h2>Filter by price</h2>
+          <div className="input-item">
+            <span>0</span>
+            <input type="range" min={0} max={1000} />
+            <span>1000</span>
+          </div>
         </div>
         <div className="product-sidebar">
-          <h2>Sort by:</h2>
+          <h2>Sort products by</h2>
+          <div className="input-item">
+            <input type="radio" name="price" id="asc" value="asc" />
+            <label htmlFor="asc">Price (Show the lowest first)</label>
+          </div>
+          <div className="input-item">
+            <input type="radio" name="price" id="desc" value="desc" />
+            <label htmlFor="desc">Price (Show the highest first)</label>
+          </div>
         </div>
       </div>
       <div className="right-section">
