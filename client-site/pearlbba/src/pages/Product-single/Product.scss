@@ -31,7 +31,78 @@
     }
     .productpage-right-section{
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .product-price{
+         font-size: 30px;
+         font-weight: 500;
+         color: hotpink;
+        }
+
+        p{
+         font-size: 18px;
+         color: gray;
+         font-weight: 300;
+         text-align: justify;
+        }
+
+        .quantity{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            button{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            }
+        }
+
+        .add-to-cart{
+            width: 225px;
+            padding: 10px;
+            background-color: hotpink;
+            color: whitesmoke;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .link{
+           display: flex;
+           gap: 20px;
+
+           .item{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: hotpink;
+            font-size: 15px;
+           }
+        }
+
+        .product-information{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: gray;
+            font-size: 15px;
+            margin-top: 30px;
+
+            hr{
+               width: 200px;
+               border: 1px solid white;
+            }
+        }
+
     }
-
-
 }

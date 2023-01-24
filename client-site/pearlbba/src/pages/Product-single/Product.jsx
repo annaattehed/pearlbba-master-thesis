@@ -30,7 +30,7 @@ const Product = () => {
       </div>
       <div className="productpage-right-section">
         <h1>PRODUCT TITLE</h1>
-        <span>PRODUCT PRICE</span>
+        <span className='product-price'>PRODUCT PRICE</span>
         <p> PRODUCT INFO - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Culpa dolores, autem iste nam commodi fugiat ratione, neque
           soluta vero tempora minus, eius nihil at ex labore corporis 
@@ -55,7 +55,7 @@ const Product = () => {
           <span>hej</span>
         </div>
         <hr />
-        <div className="product-details">
+        <div className="product-information">
           <span>PRODUCT DESCRIPTION</span>
           <hr />
           <span>OTHER ADDITIONAL INFORMATION</span>
