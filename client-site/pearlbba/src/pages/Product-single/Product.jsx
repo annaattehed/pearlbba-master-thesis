@@ -50,12 +50,6 @@ const Product = () => {
           </div>
         </div>
         <div className="product-information">
-          <span>hej</span>
-          <span>hej</span>
-          <span>hej</span>
-        </div>
-        <hr />
-        <div className="product-information">
           <span>PRODUCT DESCRIPTION</span>
           <hr />
           <span>OTHER ADDITIONAL INFORMATION</span>

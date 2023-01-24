@@ -45,6 +45,7 @@
          font-size: 18px;
          color: gray;
          font-weight: 300;
+         line-height: 30px;
          text-align: justify;
         }
 
@@ -52,6 +53,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            margin-left: 50px;
 
             button{
             width: 50px;
@@ -103,6 +105,11 @@
                border: 1px solid white;
             }
         }
+
+        hr{
+            width: 600px;
+            border: 1px solid lightgrey;
+         }
 
     }
 }
