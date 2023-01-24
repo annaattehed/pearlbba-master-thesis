@@ -35,9 +35,9 @@ const data = [
             <div className="cart-details">
                 <h1>{item.title}</h1>
                 <p>{item.desc?.substring(0,100)}</p> 
-                <div className="price">1 x {item.price}</div>
+                <div className="price">1 x {item.price} kr</div>
             </div>
-             <DeleteOutlineIcon className='delete-bin'/>
+             <DeleteOutlineIcon className='delete'/>
             </div>
         ))}
         <div className="cart-total">
