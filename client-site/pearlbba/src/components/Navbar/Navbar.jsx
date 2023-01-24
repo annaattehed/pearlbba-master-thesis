@@ -1,5 +1,7 @@
-import React from 'react'
+import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Cart from '../Cart/Cart';
 import "./Navbar.scss";
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
@@ -8,6 +10,9 @@ import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 
 
 const Navbar = () => {
+
+  const[open,setOpen] = useState(false);
+  
   return (
     <div className="navbar">
       <div className="wrapper-navbar">
@@ -38,16 +43,17 @@ const Navbar = () => {
                 <SearchTwoToneIcon/>
                 <PersonOutlineTwoToneIcon/>
                 <FavoriteTwoToneIcon/>
-                  <div className="cart-icon">
+                  <div className="cart-icon" onClick={()=>setOpen(!open)}>
                     <ShoppingCartTwoToneIcon/>
                     <span>0</span>
                   </div>
               </div>
         </div>
       </div>
+      {open && <Cart/>}
     </div>
     
-  )
-}
+  );
+};
 
 export default Navbar
