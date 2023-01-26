@@ -7,6 +7,7 @@
         flex: 1;
         position: sticky;
         height: 100%;
+        padding: 10px;
         top: 50px; 
 
         .filter-item{
@@ -19,6 +20,7 @@
 
             .input-item{
                 margin-bottom: 10px;
+            
 
                 label{
                     margin-left: 10px;
@@ -36,6 +38,11 @@
             height: 300px;
             object-fit: cover;
             margin-bottom: 50px;
+        }
+
+        .imglist{
+            display: flex;
+           
         }
     }
 

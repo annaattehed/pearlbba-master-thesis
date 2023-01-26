@@ -18,7 +18,7 @@ const Footer = () => {
             <span>New arrivals</span>
         </div>
         <div className='footer-information'>
-            <h1>Contact</h1>
+            <h1>Contact us</h1>
             <span>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
