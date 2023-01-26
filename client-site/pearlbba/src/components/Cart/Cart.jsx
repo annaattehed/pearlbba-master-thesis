@@ -1,9 +1,20 @@
 import React from 'react';
 import './Cart.scss';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { useSelector } from 'react';
+import { removeItem, resetCart } from '../../redux/cartReducer';
+import { useDispatch } from 'react-redux';
 
 const Cart = () => {
 
+const products = useSelector((state)=>state.cart.products);
+const dispatch =useDispatch();
+
+const totalPrice = () => {
+    let total = 0;
+    products.forEach((item) => (total += item.quantity * item.price));
+    return total.toFixed(2);
+}
 const data = [
     {
         id: 1,
@@ -35,17 +46,17 @@ const data = [
             <div className="cart-details">
                 <h1>{item.title}</h1>
                 <p>{item.desc?.substring(0,100)}</p> 
-                <div className="price">1 x {item.price} kr</div>
+                <div className="price"> {item.quantity} x {item.price} kr</div>
             </div>
-             <DeleteOutlineIcon className='delete'/>
+             <DeleteOutlineIcon className='delete' onClick={()=>dispatch(removeItem(item.id))}/>
             </div>
         ))}
         <div className="cart-total">
             <span>Subtotal:</span>
-            <span>1245kr</span>
+            <span>${totalPrice()}</span>
         </div>
         <button>PROCEED TO CHECKOUT</button>
-        <span className='empty-cart'>EMPTY CART</span>
+        <span className='empty-cart' onClick={()=>dispatch(resetCart())}>EMPTY CART</span>
        
     </div>
   );

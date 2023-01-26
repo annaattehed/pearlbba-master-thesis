@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Cart from '../Cart/Cart';
 import "./Navbar.scss";
+import { useSelector } from 'react';
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 import PersonOutlineTwoToneIcon from '@mui/icons-material/PersonOutlineTwoTone';
@@ -12,6 +13,7 @@ import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 const Navbar = () => {
 
   const[open,setOpen] = useState(false);
+  const products = useSelector((state)=>state.cart.products);
   
   return (
     <div className="navbar">
@@ -45,7 +47,7 @@ const Navbar = () => {
                 <FavoriteTwoToneIcon/>
                   <div className="cart-icon" onClick={()=>setOpen(!open)}>
                     <ShoppingCartTwoToneIcon/>
-                    <span>0</span>
+                    <span>{products.length}</span>
                   </div>
               </div>
         </div>
