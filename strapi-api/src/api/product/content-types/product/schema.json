@@ -41,6 +41,14 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "products"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "normal",
+        "bestselling",
+        "reduced"
+      ]
     }
   }
 }

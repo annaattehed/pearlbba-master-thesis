@@ -54,7 +54,7 @@ const BestSellers = ({type}) => {
         const fetchData = async () => {
             try {
         const res = await axios.get(
-            process.env.REACT_APP_API_URL + "/products", 
+            process.env.REACT_APP_API_URL + `/products?populate=*&[filters][type][$eq]=${type}`, 
         {
            headers: {
              Authorization: "bearer " + process.env.REACT_APP_API_TOKEN,
@@ -68,6 +68,8 @@ const BestSellers = ({type}) => {
     };
     fetchData();
         },[]);
+
+        console.log(data)
 
     return (
         <div className='bestSellers'>

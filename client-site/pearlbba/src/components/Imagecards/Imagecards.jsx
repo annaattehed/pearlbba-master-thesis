@@ -7,8 +7,8 @@ const Imagecards = ({item}) => {
     <Link to={`/product/${item.id}`}>
     <div className='imagecards'>
         <div className='image'>
-            {item?.attributes.isNew && <span>This just in!</span>}
-            <img src="{item.img}" alt="" className="image" />
+            {item?.attributes && <span>This just in!</span>}
+            <img src="{process.env.REACT_APP_UPLOAD_URL + item.attributes?.img?.data?.attributes?.url}" alt="product" className="image" />
         </div>
         <h2>{item?.attributes.title}</h2>
         <div className="prices">
