@@ -1,12 +1,41 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Imagecards from '../Imagecards/Imagecards';
 import './Bestsellers.scss';
-import { useState } from 'react';
-import axios from 'axios';
+import useFetch from '../../hooks/useFetch';
 
-const BestSellers = ({type}) => {
+const BestSellers = ( { type }) => {
 
-    // const data = [  
+   // fetching product data from api 
+   const { data, loading, error } = useFetch(
+      `/products?populate=*&[filters][type][$eq]=${type}`
+   );
+
+    return (
+        <div className='bestSellers'>
+            <div className="top-homepage-products">
+                <h1>{type} products</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                    numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                    optio, eaque rerum! Provident similique accusantium nemo autem. 
+                    </p>
+            </div>
+            <div className="bottom-homepage-products">
+                {loading 
+                   ? "loading" 
+                   : data.map(item=>(
+                    <Imagecards item={item} key={item.id}/>
+                ))}
+            </div>
+        </div>
+    )
+    
+}
+
+export default BestSellers
+
+ // const data = [  
     //     {
     //         id: 1,
     //         img: <img src="images/berrys.jpg" alt="Bracelet with cherry berrys"/>,
@@ -45,53 +74,3 @@ const BestSellers = ({type}) => {
     //     },
 
     // ];
-
-   // fetching product data from api 
-  
-    const [data, setData] = useState([]);
-
-    useEffect(()=>{
-        const fetchData = async () => {
-            try {
-        const res = await axios.get(
-            process.env.REACT_APP_API_URL + `/products?populate=*&[filters][type][$eq]=${type}`, 
-        {
-           headers: {
-             Authorization: "bearer " + process.env.REACT_APP_API_TOKEN,
-           }, 
-          }
-        );
-        setData(res.data.data);
-        }catch(err){
-            console.log(err);
-        };
-    };
-    fetchData();
-        },[]);
-
-        console.log(data)
-
-    return (
-        <div className='bestSellers'>
-
-            <div className="top-homepage-products">
-                <h1>{type} products</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                    numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                    optio, eaque rerum! Provident similique accusantium nemo autem. 
-                    </p>
-            </div>
-            <div className="bottom-homepage-products">
-                {data.map(item=>(
-                    <Imagecards item={item} key={item.id}/>
-                ))}
-            </div>
-        </div>
-    )
-    
-}
-
-
-export default BestSellers
