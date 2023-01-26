@@ -44,9 +44,11 @@ const List = () => {
     ]
   return (
 
-    <div className='imglist'>{data?.map(item=>(
-        <Imagecards item={item} key={item.id}/>
-    ))}</div>
+    <div className='imglist'>
+        {data?.map(item=>(
+         <Imagecards item={item} key={item.id}/>
+    ))}
+    </div>
   )
 }
 

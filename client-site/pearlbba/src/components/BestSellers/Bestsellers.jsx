@@ -22,11 +22,11 @@ const BestSellers = ( { type }) => {
                     </p>
             </div>
             <div className="bottom-homepage-products">
-                {loading 
+                {error
+                 ? "something went wrong"
+                 : loading 
                    ? "loading" 
-                   : data.map(item=>(
-                    <Imagecards item={item} key={item.id}/>
-                ))}
+                   : data?.map((item) => <Imagecards item={item} key={item.id} /> )}
             </div>
         </div>
     )
