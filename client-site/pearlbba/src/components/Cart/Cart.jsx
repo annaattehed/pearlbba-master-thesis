@@ -4,6 +4,8 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { useSelector } from 'react';
 import { removeItem, resetCart } from '../../redux/cartReducer';
 import { useDispatch } from 'react-redux';
+import {loadStripe} from '@stripe/stripe-js';
+import { makeRequest } from '../../makeMyRequests';
 
 const Cart = () => {
 
@@ -14,6 +16,24 @@ const totalPrice = () => {
     let total = 0;
     products.forEach((item) => (total += item.quantity * item.price));
     return total.toFixed(2);
+}
+const stripePromise = loadStripe('pk_test_51MUf5rCCAWctOC9ZdG9GrBxoecXNTh12He1iMnVqmuTh69KB60CTciPqRXuoa5n6TaAQ7iNtW8ueMTGwIR67MHiM002zJclOBc');
+
+const handlePayment = async()=>{
+    try{
+        const stripeConn = await stripePromise;
+
+        const res = await makeRequest.post("/orders", {
+            products,
+        });
+
+        await stripeConn.redirectToCheckout({
+            sessionId: res.data.stripeSession.id,
+        })
+
+    }catch(err){
+        console.log(err)
+    }
 }
 const data = [
     {
@@ -55,7 +75,7 @@ const data = [
             <span>Subtotal:</span>
             <span>${totalPrice()}</span>
         </div>
-        <button>PROCEED TO CHECKOUT</button>
+        <button onClick={handlePayment}>PROCEED TO CHECKOUT</button>
         <span className='empty-cart' onClick={()=>dispatch(resetCart())}>EMPTY CART</span>
        
     </div>
