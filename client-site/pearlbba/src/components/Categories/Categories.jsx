@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Categories.scss';
 
+// slider with different category-choices 
+
 const Categories = () => {
   return (
     <div className='categories'>

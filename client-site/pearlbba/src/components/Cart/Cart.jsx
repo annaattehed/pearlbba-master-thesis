@@ -12,6 +12,7 @@ const Cart = () => {
 const products = useSelector((state)=>state.cart.products);
 const dispatch =useDispatch();
 
+// getting the totalprice generated with only two decimals 
 const totalPrice = () => {
     let total = 0;
     products.forEach((item) => (total += item.quantity * item.price));

@@ -18,6 +18,8 @@ const persistConfig = {
   storage,
 };
 
+// preventing cart to update to empty when refreshing page
+
 const persistedReducer = persistReducer(persistConfig, cartReducer);
 
 export const store = configureStore({

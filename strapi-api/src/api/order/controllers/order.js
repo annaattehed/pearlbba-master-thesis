@@ -12,7 +12,7 @@ module.exports = createCoreController('api::order.order', ({strapi})=>({
   async create(ctx){
     const { products } = ctx.request.body;
 
-    // search for frontend product in backend db
+    // search for frontend product in database to try to go to payment
 
     const lineItems = await Promise.all(
       products.map(async (product) =>

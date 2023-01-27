@@ -2,6 +2,9 @@ import React from 'react';
 import './Imagecards.scss';
 import {Link} from 'react-router-dom';
 
+
+// the image containers to be recieved via api call 
+
 const Imagecards = ({item}) => {
   return (
     <Link to={`/product/${item.id}`}>

@@ -6,6 +6,7 @@ const initialState = {
 
 // adding products to shoppingcart to the empty array "products"
 // deleting and empty cart from line 22
+// this file is generated in cart.js
 
 export const shoppingCartSlice = createSlice({
   name: "cart",

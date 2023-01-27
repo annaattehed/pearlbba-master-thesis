@@ -1,6 +1,8 @@
 import React from 'react'
 import Imagecards from '../Imagecards/Imagecards'
 
+// suppose to be via api but here still via local data 
+
 const List = () => {
 
     const data = [  

@@ -9,19 +9,15 @@ import { addToCart } from '../../redux/cartReducer';
 
 const Product = () => {
 
+  // getting products by id and display right media
+  
   const id = useParams().id;
   const [selectedImg,setSelectedImg] =useState("img")
   const [quantity,setQuantity] =useState(1)
 
   const dispatch =useDispatch();
-  const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
+  const { data, loading } = useFetch(`/products/${id}?populate=*`);
 
-    // inte rätt bilder 
-
-  // const images = [
-  //   "https://images.pexels.com/photos/1456291/pexels-photo-1456291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   "https://images.pexels.com/photos/1268874/pexels-photo-1268874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  // ]
   return (
     <div className='product-single'>
       {loading ? "loading" : (<><div className="productpage-left-section">
@@ -61,13 +57,6 @@ const Product = () => {
           <div className="item">
           <FavoriteBorderIcon /> ADD TO WISHLIST 
           </div>
-        </div>
-        <div className="product-information">
-          <span>PRODUCT DESCRIPTION</span>
-          <hr />
-          <span>OTHER ADDITIONAL INFORMATION</span>
-          <hr />
-          <span>SHOP WITH US - THE DETAILS</span>
         </div>
       </div></>)}
     </div>

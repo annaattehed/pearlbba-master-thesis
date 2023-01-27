@@ -4,6 +4,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
+// container over footer to "sign up" for our newsletter 
 
 const Newsletter = () => {
   return (
